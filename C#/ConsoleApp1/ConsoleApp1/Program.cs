@@ -49,3 +49,10 @@ static void Expression()
 }
 //Expression();
 
+//even odd - parity check
+static void ParityCheck()
+{
+    OddEven obj4 = new();
+    obj4.Check();
+}
+ParityCheck();
