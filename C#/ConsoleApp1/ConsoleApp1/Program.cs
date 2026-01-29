@@ -70,4 +70,15 @@ static void Large()
     Largest obj5 = new(a, b, c);
     obj5.Find();
 }
-Large();
+//Large();
+
+//Grade system
+static void Grade()
+{
+    int marks;
+    Console.WriteLine("Enter Marks:");
+    marks = Convert.ToInt32(Console.ReadLine());
+    GradeSystem obj6 = new(marks);
+    obj6.Grade();
+}
+Grade();
