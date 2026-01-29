@@ -55,4 +55,19 @@ static void ParityCheck()
     OddEven obj4 = new();
     obj4.Check();
 }
-ParityCheck();
+//ParityCheck();
+
+//Largest of three numbers
+static void Large()
+{
+    int a, b, c;
+    Console.WriteLine("Enter Number 1:");
+    a = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("Enter Number 2:");
+    b = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("Enter Number 3:");
+    c = Convert.ToInt32(Console.ReadLine());
+    Largest obj5 = new(a, b, c);
+    obj5.Find();
+}
+Large();
