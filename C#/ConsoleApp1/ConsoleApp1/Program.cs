@@ -81,4 +81,14 @@ static void Grade()
     GradeSystem obj6 = new(marks);
     obj6.Grade();
 }
-Grade();
+//Grade();
+
+//Multiplication table
+static void Multiplication()
+{
+    Console.WriteLine("Enter number for its table:");
+    int num = Convert.ToInt32(Console.ReadLine());
+    MultiTable obj7 = new();
+    obj7.Table(num);
+}
+Multiplication();
