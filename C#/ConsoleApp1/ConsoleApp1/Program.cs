@@ -91,4 +91,15 @@ static void Multiplication()
     MultiTable obj7 = new();
     obj7.Table(num);
 }
-Multiplication();
+//Multiplication();
+
+//Sum of natural numbers from 1 to n
+static void Natural()
+{
+    int n;
+    Console.WriteLine("Enter a number:");
+    n = Convert.ToInt32(Console.ReadLine());
+    NaturalSum obj8 = new();
+    obj8.Sum(n);
+}
+Natural();
