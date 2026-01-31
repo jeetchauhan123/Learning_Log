@@ -113,4 +113,19 @@ void Factorial()
     Factorial obj9 = new();
     obj9.Fact(n);
 }
-Factorial();
+//Factorial();
+
+//SimpleIntrest Interest
+static void SimpleIntrest()
+{
+    float p, r, t;
+    Console.WriteLine("Enter Principal Amount:");
+    p = float.Parse(Console.ReadLine());
+    Console.WriteLine("Enter Rate of Interest:");
+    r = float.Parse(Console.ReadLine());
+    Console.WriteLine("Enter Time in years:");
+    t = float.Parse(Console.ReadLine());
+    SimpleIntrest obj10 = new();
+    obj10.Si(p, r, t);
+}
+SimpleIntrest();
