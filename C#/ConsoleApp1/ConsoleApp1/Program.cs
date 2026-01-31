@@ -102,4 +102,15 @@ static void Natural()
     NaturalSum obj8 = new();
     obj8.Sum(n);
 }
-Natural();
+//Natural();
+
+//Factorial
+void Factorial()
+{
+    int n;
+    Console.WriteLine("Enter a number:");
+    n = Convert.ToInt32(Console.ReadLine());
+    Factorial obj9 = new();
+    obj9.Fact(n);
+}
+Factorial();
