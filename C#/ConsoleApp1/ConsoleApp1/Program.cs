@@ -129,3 +129,22 @@ static void SimpleIntrest()
     obj10.Si(p, r, t);
 }
 SimpleIntrest();
+
+
+//Compound Interest
+static void CompoundIntrest()
+{
+    float p, r, t;
+    int n;
+    Console.WriteLine("Enter Principal Amount:");
+    p = float.Parse(Console.ReadLine());
+    Console.WriteLine("Enter Rate of Interest:");
+    r = float.Parse(Console.ReadLine());
+    Console.WriteLine("Enter Time in years:");
+    t = float.Parse(Console.ReadLine());
+    Console.WriteLine("Enter number of times interest applied per time period:");
+    n = int.Parse(Console.ReadLine());
+    CompoundInterest obj11 = new();
+    obj11.Ci(p, r, t, n);
+}
+//CompoundIntrest();
