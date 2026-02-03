@@ -10,6 +10,7 @@ static void Calc()
 }
 //Calc();
 
+
 static void Pattern()
 {
     Patterns obj2 = new();
@@ -42,12 +43,14 @@ static void Pattern()
 }
 //Pattern();
 
+
 static void Expression()
 {
     Bodmas obj3 = new();
     obj3.Accept();
 }
 //Expression();
+
 
 //even odd - parity check
 static void ParityCheck()
@@ -56,6 +59,7 @@ static void ParityCheck()
     obj4.Check();
 }
 //ParityCheck();
+
 
 //Largest of three numbers
 static void Large()
@@ -72,6 +76,7 @@ static void Large()
 }
 //Large();
 
+
 //Grade system
 static void Grade()
 {
@@ -83,6 +88,7 @@ static void Grade()
 }
 //Grade();
 
+
 //Multiplication table
 static void Multiplication()
 {
@@ -92,6 +98,7 @@ static void Multiplication()
     obj7.Table(num);
 }
 //Multiplication();
+
 
 //Sum of natural numbers from 1 to n
 static void Natural()
@@ -104,6 +111,7 @@ static void Natural()
 }
 //Natural();
 
+
 //Factorial
 void Factorial()
 {
@@ -114,6 +122,7 @@ void Factorial()
     obj9.Fact(n);
 }
 //Factorial();
+
 
 //SimpleIntrest Interest
 static void SimpleIntrest()
@@ -128,7 +137,7 @@ static void SimpleIntrest()
     SimpleIntrest obj10 = new();
     obj10.Si(p, r, t);
 }
-SimpleIntrest();
+//SimpleIntrest();
 
 
 //Compound Interest
@@ -148,3 +157,15 @@ static void CompoundIntrest()
     obj11.Ci(p, r, t, n);
 }
 //CompoundIntrest();
+
+
+//Prime Number
+static void Prime()
+{
+    double n;
+    Console.WriteLine("Enter a number:");
+    n = Convert.ToDouble(Console.ReadLine());
+    PrimeNum obj12 = new();
+    obj12.IsPrime(n);
+}
+Prime();
