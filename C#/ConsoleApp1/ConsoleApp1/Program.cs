@@ -162,10 +162,10 @@ static void CompoundIntrest()
 //Prime Number
 static void Prime()
 {
-    double n;
+    int n;
     Console.WriteLine("Enter a number:");
-    n = Convert.ToDouble(Console.ReadLine());
+    n = Convert.ToInt16(Console.ReadLine());
     PrimeNum obj12 = new();
-    obj12.IsPrime(n);
+    obj12.Print(n);
 }
 Prime();

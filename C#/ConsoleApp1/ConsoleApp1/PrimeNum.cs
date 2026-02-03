@@ -6,24 +6,24 @@ namespace ConsoleApp1
 {
     internal class PrimeNum
     {
-        internal void IsPrime(double n)
+        internal bool IsPrime(int n)
         {
-            if (n <= 1)
+            if (n <= 1) return false;
+            int limit = (int)Math.Sqrt(n);
+            for (int i = 2; i <= limit; i++)
             {
-                Console.WriteLine($"{n} is not prime number");
-            }
-            else
-            {
-                for(int i = 2; i <= Math.Sqrt(n); i++)
+                if (n % i == 0)
                 {
-                    if (n % i == 0)
-                    {
-                        Console.WriteLine($"{n} is not prime number");
-                        return;
-                    }
+                    return false;
                 }
-                Console.WriteLine($"{n} is prime number");
             }
+            return true;
+        }
+        internal void Print(int n)
+        {
+            Console.WriteLine(IsPrime(n)
+                ? $"{n} is prime number"
+                : $"{n} is not prime number");
         }
     }
 }
