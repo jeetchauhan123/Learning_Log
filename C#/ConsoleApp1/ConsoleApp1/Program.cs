@@ -168,4 +168,13 @@ static void Prime()
     PrimeNum obj12 = new();
     obj12.Print(n);
 }
-Prime();
+//Prime();
+
+
+//Temperature Converter
+static void TempConvert()
+{
+    Temperature t = new Temperature();
+    t.Convert();
+}
+//TempConvert();
