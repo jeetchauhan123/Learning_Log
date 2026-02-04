@@ -174,7 +174,7 @@ static void Prime()
 //Temperature Converter
 static void TempConvert()
 {
-    Temperature t = new Temperature();
-    t.Convert();
+    Menu menu = new();
+    menu.ShowMenu();
 }
 //TempConvert();
