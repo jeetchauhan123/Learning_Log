@@ -178,3 +178,11 @@ static void TempConvert()
     menu.ShowMenu();
 }
 //TempConvert();
+
+//simple program to demonstrate class and objects
+static void StudentDetails()
+{
+    StudentMenu studentMenu = new();
+    studentMenu.Accept();
+}
+//StudentDetails();
