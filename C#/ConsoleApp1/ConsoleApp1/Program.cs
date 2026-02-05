@@ -185,4 +185,4 @@ static void StudentDetails()
     StudentMenu studentMenu = new();
     studentMenu.Accept();
 }
-//StudentDetails();
+StudentDetails();
