@@ -185,4 +185,21 @@ static void StudentDetails()
     StudentMenu studentMenu = new();
     studentMenu.Accept();
 }
-StudentDetails();
+//StudentDetails();
+
+//assigning values using constructor
+static void BankDetails()
+{
+    int accno;
+    string acchold;
+    double Balance;
+    Console.WriteLine("Enter Account Number:");
+    accno = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("Enter Account Holder Name:");
+    acchold = Console.ReadLine();
+    Console.WriteLine("Enter Account Balance:");
+    Balance = Convert.ToDouble(Console.ReadLine());
+    ConstructorBank bank = new(accno, acchold, Balance);
+    bank.DisplayDetails();
+}
+BankDetails();
