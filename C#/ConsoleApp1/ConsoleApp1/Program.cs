@@ -179,6 +179,7 @@ static void TempConvert()
 }
 //TempConvert();
 
+
 //simple program to demonstrate class and objects
 static void StudentDetails()
 {
@@ -186,6 +187,7 @@ static void StudentDetails()
     studentMenu.Accept();
 }
 //StudentDetails();
+
 
 //assigning values using constructor
 static void BankDetails()
@@ -202,4 +204,14 @@ static void BankDetails()
     ConstructorBank bank = new(accno, acchold, Balance);
     bank.DisplayDetails();
 }
-BankDetails();
+//BankDetails();
+
+
+//Parking System by my own logic
+void ParkingSystem()
+{
+    ParkingLogic logic = new();
+    logic.Run();
+}
+//ParkingSystem();
+
