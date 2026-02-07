@@ -102,7 +102,94 @@ namespace ConsoleApp1
             menu.GetValueOrDefault(ch, () => Console.WriteLine("Invalid choice"))();
             return ch;
         }
-        
+        public void Fmenu()
+        {
+            int ch;
+            Console.WriteLine("Choose a Type of vehicle");
+            Console.WriteLine("1. Bike");
+            Console.WriteLine("2. Car");
+            Console.WriteLine("3. Truck");
+            ch = Convert.ToInt16(Console.ReadLine());
+            Dictionary<int, Action> park = new()
+            {
+                { 1, () => {
+                    ParkVehicle(new Bikes());
+                } },
+                { 2, () => {
+                    ParkVehicle(new Cars());
+                } },
+                { 3, () => {
+                    ParkVehicle(new Trucks());
+                } },
+            };
+            park.GetValueOrDefault(ch, () => { 
+                Console.WriteLine("Invalid Choise");
+            })();
+
+        }
+        public void Smenu()
+        {
+            Console.WriteLine();
+
+             
+            Console.WriteLine("Current slots status:");
+            for (int i = 0; i < slots.Length; i++)
+            {
+                if (slots[i] != null)
+                {
+                    Console.WriteLine(
+                        $"Slot {i}: {slots[i].VehicleType.GetType().Name}, Entry: {slots[i].EntryTime}"
+                    );
+                }
+                else
+                {
+                    Console.WriteLine($"Slot {i}: Empty");
+                }
+            }
+            Console.WriteLine();
+        }
+        public void Tmenu()
+        {
+            int slot;
+            Console.WriteLine("Enter slot number to exit");
+            slot = Convert.ToInt16(Console.ReadLine());
+            if (slot < 0 || slot >= slots.Length)
+            {
+                Console.WriteLine("Invalid slot number");
+                return;
+            }
+            else if (slots[slot] != null)
+            {
+                DateTime exitTime = DateTime.Now;
+                Ticket(slot, exitTime);
+                slots[slot] = null;
+            }
+            else
+            {
+                Console.WriteLine("Slot is already empty");
+            }
+        }
     }
-    
+    internal class ParkingLogic
+    {
+        private bool running = true;
+        private Start start;
+        public ParkingLogic()
+        {
+            start = new Start();
+            start.ExitAction = Stop;
+        }
+        public void Run()
+        {
+            while (running)
+            {
+                start.MainMenu();
+            }
+            Console.WriteLine("Program stopped.");
+        }
+        public void Stop()
+        {
+            running = false;
+        }
+    }
 }
